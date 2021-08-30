@@ -9,22 +9,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Personal Expense App</title>
+    <script
+    defer
+    src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+    integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+    crossorigin="anonymous"
+  ></script>
+
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+
+    <title>Money Manager</title>
  
 
   </head>
   <body>
-    <h1 id="sumHead">0</h1>
 
-    <input type="text" name="itemAmt" id="itemAmt" />
+    <nav class="navbar navbar-dark bg-dark text-center" >
+		<div class="text-center">
+			<h3 class="navbar-brand mb-0 h1 text-center" >MoneyMan</h3>
+		</div>
+			<!-- <span class="navbar-brand mb-0 h1" id="sumHead"></span> -->
+		</nav>
 
-    <input type="text" name="itemName" id="itemName">
+    <div class="container-fluid bg-light" style="min-height: 100vh">
+			<div class="container">
+				<div class="jumbotron mt-4">
+					<div class="input-group mb-3">
+						<input
+							type="text"
+							class="form-control"
+							id="itemAmt"
+							placeholder="Amount Spent"
+							aria-label="Amount spent"
+							aria-describedby="spent in rupee"
+						/>
+						<div class="input-group-append">
+							<span class="input-group-text" id="spent in rupee">₹</span>
+						</div>
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="spent at">@</span>
+						</div>
+						<input
+							type="text"
+							class="form-control"
+							id="itemName"
+							placeholder="Spent On"
+							aria-label="spent On"
+							aria-describedby="spent at"
+						/>
+						<div class="input-group-append">
+							<button class="btn btn-outline-primary" type="button" id="addBtn">Add</button>
+						</div>
+					</div>
+					<div style="text-align-last: center; margin-top: 2rem;">
+						<h5 id="sumHead">0</h5>
+					</div>
+				</div>
+				<div>
+					<ul class="list-group" id="spendingtable"></ul>
+				</div>
+			</div>
+			
+		</div>
+<!-- 
+    <h1 id="sumHead">0</h1> -->
 
-    <button id="addBtn">+</button>
+    <!-- <input type="text" name="itemAmt" id="itemAmt" />
 
-    <div id="spendingtable"></div>
+    <input type="text" name="itemName" id="itemName"> -->
+<!-- 
+    <button id="addBtn">+</button> -->
+
+    <!-- <div id="spendingtable"></div> -->
 <!-- Linking Js Script below s that js script activates after taking the values from the html body first -->
 <script type="text/javascript" src="magic.js"></script>
+
+
 
   </body>
 </html>
